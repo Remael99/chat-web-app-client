@@ -1,13 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/* 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 16px;
+}
+
+
+::-webkit-scrollbar-track {
+  border-radius: 50vh;
+  background: #edf2f7;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 50vh;
+  border: 3px solid #edf2f7;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+} */
+
+.custom-file-input::-webkit-file-upload-button::before {
+  visibility: hidden !important;
+}
+
+.custom-file-input::before {
+  content: "upload photo";
+  display: inline-block;
+  background: linear-gradient(to left, #10ee2e, #32f720);
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.custom-file-input:hover::before {
+  border-color: rgb(197, 196, 196);
+}
+
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(to left, #27f041, #6ef762);
 }
